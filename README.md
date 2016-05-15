@@ -34,7 +34,7 @@ Uses the memoized `compileTemplate`.
 Example: `getBestPartial('some/folder', [ 'specificPartial', 'defaultPartial' ])`
 will first check for `some/folder/specificPartial` and then for `some/folder/defaultPartial` and return the compiled template for the first existing partial.
 
-## createImportHelper(options)
+## `createImportHelper(options)`
 
 This is the main feature of the module. The function creates a helper (_but does not register it_) that can be called like that:
 
@@ -58,7 +58,7 @@ The options are:
 
 Creates the import helper and registers it with Handlebars under `options.importName`. `options` are the same described above.
 
-## registerConsolidate(consolidate, options)
+## `registerConsolidate(consolidate, options)`
 
 Convenience method if you use `consolidate` to render your handlebars templates. This calls `registerHelper` and then passes the reference to packaged `Handlebars` to `consolidate`.
 

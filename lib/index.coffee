@@ -14,7 +14,7 @@ exports.render = (template, context) ->
 
 exports.getPartial = getPartial = _.memoize (key) ->
   partial = Handlebars.partials[key]
-  return if not partial
+  return if not partial?
   return compileTemplate(partial)
 
 exports.getBestPartial = getBestPartial = (prefix, options, sep = '/') ->

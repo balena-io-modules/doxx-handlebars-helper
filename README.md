@@ -34,6 +34,11 @@ Uses the memoized `compileTemplate`.
 Example: `getBestPartial('some/folder', [ 'specificPartial', 'defaultPartial' ])`
 will first check for `some/folder/specificPartial` and then for `some/folder/defaultPartial` and return the compiled template for the first existing partial.
 
+**Special JSON partials handling.** For convenience multiple partials can be combined under a single JSON partial. To use this feature that special combined partial name must end with `.json` (if your partials are imported from the filesystem this usually means that the file should have double extension, like `some/file.json.part`).
+The partial is parsed and it should result in an object whose keys are treated as search partial names. In this case the `separator` parameter is ignored.
+
+This is useful when you have lots of small (usually one-line) partials — instead of a folder with hundreds of files in it you can have a single JSON file.
+
 ## `createImportHelper(options)`
 
 This is the main feature of the module. The function creates a helper (_but does not register it_) that can be called like that:

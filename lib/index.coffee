@@ -12,15 +12,35 @@ exports.render = (template, context) ->
   compiled = compileTemplate(template)
   return compiled(context)
 
-exports.getPartial = getPartial = _.memoize (key) ->
+parseJsonPartial = _.memoize (key) ->
   partial = Handlebars.partials[key]
+  return if not partial?
+  try
+    return JSON.parse(partial)
+  catch e
+    throw new Error("Error parsing JSON partial #{key}: #{e}")
+
+getPartial = (hash, key) ->
+  partial = hash[key]
   return if not partial?
   return compileTemplate(partial)
 
-exports.getBestPartial = getBestPartial = (prefix, options, sep = '/') ->
+exports.getPartial = (key) -> getPartial(Handlebars.partials, key)
+
+getFullKey = (prefix, option, sep) -> "#{prefix}#{sep}#{option}"
+
+exports.getBestPartial = getBestPartial = _.memoize (prefix, options, sep = '/') ->
+  hash = Handlebars.partials
+  getKey = getFullKey
+  combinedPrefix = "#{prefix}.json"
+  if hash[combinedPrefix]?
+    hash = parseJsonPartial(combinedPrefix)
+    getKey = (prefix, option, sep) -> option
+
   for option in options
-    partial = getPartial("#{prefix}#{sep}#{option}")
+    partial = getPartial(hash, getKey(prefix, option, sep))
     return partial if partial
+, getFullKey
 
 importDefaults =
   importName: 'import'

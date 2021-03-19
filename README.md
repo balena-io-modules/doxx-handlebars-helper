@@ -1,7 +1,7 @@
 Handlebars helper for smart partials import.
 ======================
 
-> Extracted from [doxx](https://github.com/resin-io-playground/doxx).
+> Extracted from [doxx](https://github.com/balena-io-modules/doxx).
 
 This is a very simple module that exposes a couple of convenience methods to render Handlebars templates by hand, and a "smart partials" helper.
 

@@ -1,5 +1,5 @@
 {
-  "name": "@resin.io/doxx-handlebars-helper",
+  "name": "@balena/doxx-handlebars-helper",
   "version": "0.2.1",
   "description": "Handlebars helper for smart partials import.",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/resin-io-modules/doxx-handlebars-helper.git"
+    "url": "git://github.com/balena-io-modules/doxx-handlebars-helper.git"
   },
   "author": "Eugene Mirotin <eugene@resin.io>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/resin-io-playground/doxx-handlebars-helper/issues"
+    "url": "https://github.com/balena-io-modules/doxx-handlebars-helper/issues"
   },
-  "homepage": "https://github.com/resin-io-playground/doxx-handlebars-helper",
+  "homepage": "https://github.com/balena-io-modules/doxx-handlebars-helper",
   "dependencies": {
     "handlebars": "^4.0.5",
     "lodash": "^4.11.1"

@@ -1,0 +1,18 @@
+- commits:
+  - author: Pagan Gazzard
+    body: ""
+    footers:
+      change-type: major
+    hash: 95f921468d61e38779bb6e52dff18cadd2497fba
+    subject: Rename to @balena/doxx-handlebars-helper
+  date: "2021-03-19T19:32:24Z"
+  version: 1.0.0
+- commits:
+  - author: Pagan Gazzard
+    body: This avoids the needs to compile on every run
+    footers:
+      change-type: patch
+    hash: 426003bc54a1b2bd728255f0bef0a92b2073bfbb
+    subject: Build coffeescript files before publishing
+  date: "2021-03-19T18:57:27Z"
+  version: 0.2.1

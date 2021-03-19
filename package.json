@@ -4,6 +4,7 @@
   "description": "Handlebars helper for smart partials import.",
   "main": "index.js",
   "scripts": {
+    "prepare": "coffee -o build -c lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +18,10 @@
   },
   "homepage": "https://github.com/resin-io-playground/doxx-handlebars-helper",
   "dependencies": {
-    "coffee-script": "^1.10.0",
     "handlebars": "^4.0.5",
     "lodash": "^4.11.1"
+  },
+  "devDependencies": {
+    "coffeescript": "^1.12.7"
   }
 }

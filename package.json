@@ -1,6 +1,6 @@
 {
   "name": "@resin.io/doxx-handlebars-helper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Handlebars helper for smart partials import.",
   "main": "index.js",
   "scripts": {

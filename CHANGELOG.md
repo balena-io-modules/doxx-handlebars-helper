@@ -4,6 +4,11 @@
 
 ## 0.1.1
 
+# v1.0.0
+## (2021-03-19)
+
+* Rename to @balena/doxx-handlebars-helper [Pagan Gazzard]
+
 # v0.2.1
 ## (2021-03-19)
 

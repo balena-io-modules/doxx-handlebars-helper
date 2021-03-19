@@ -1,6 +1,6 @@
 {
   "name": "@balena/doxx-handlebars-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Handlebars helper for smart partials import.",
   "main": "index.js",
   "scripts": {
